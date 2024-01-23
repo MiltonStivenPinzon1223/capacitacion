@@ -14,7 +14,12 @@ class Category extends Model
     ];
 
     protected $hidden = [
+        'status',
         'created_at',
         'updated_at',
     ];
+
+    public function characters(){
+        return $this->hasMany(Character::class, 'id');
+    }
 }

@@ -18,4 +18,8 @@ class Character extends Model
         'created_at',
         'updated_at',
     ];
+
+    public function categories() {
+        return $this->belongsTo(Category::class, 'id_categories');
+    }
 }
